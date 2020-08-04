@@ -1,0 +1,21 @@
+<form name="form">
+  <div class="row">
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Search</span>
+        </div>
+        <input type="text" id="search" name="search" placeholder="type open or close" class="form-control">
+      </div>
+    </div>
+  </div>
+</form>
+<div class="row">
+  <ag-grid-angular style="width: 100%; height: 500px;" [pagination]="true"
+   class="ag-theme-balham" [rowData]="rowData" 
+   [rowSelection]="rowSelection"
+   (gridReady)="onGridReady($event)"
+   (selectionChanged)="onSelectionChanged($event)"
+    [columnDefs]="columnDefs">
+  </ag-grid-angular>
+</div>
